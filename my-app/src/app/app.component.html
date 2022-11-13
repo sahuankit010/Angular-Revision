@@ -1,0 +1,14 @@
+<div>
+  <app-sizer [(size)]="fontSizePx"></app-sizer>
+  <div [style.font-size.px]="fontSizePx">Resizable Text</div>
+</div>
+<div>
+  <input type="text" [(ngModel)]="name">
+  <h1>{{name}}</h1>
+</div>
+
+<div>
+  Name:
+  <input type="text" name="name" ngModel (ngModelChange)="nameChanged($event)">
+
+</div>
